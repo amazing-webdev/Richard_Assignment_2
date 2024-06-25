@@ -1,0 +1,160 @@
+body {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    background-color: #8D818C;
+}
+
+#container {
+    /* outline for all */
+    border: solid;
+}
+
+#gallery-parent {
+    position: relative;
+    border-bottom: solid;
+    height: 25%;
+    width: 100%;
+    background-color: #A5A299;
+}
+
+#gallery {
+    padding-left: 20%;
+    height: 25%;
+    width: 100%;
+    background-color: #A5A299;
+}
+
+#button-container {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    background-color: #B4B8C5;
+}
+
+#button {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #E9EBF8;
+    border: 10px , solid, #93678f;
+    font-size: 20px;
+    font-weight: 300;
+    margin: auto;
+
+    transition: transform 0.3s ease 0s , background-color 0.3s, color 0.3s;
+}
+#button:hover{
+    transform: translateY(-10px);
+    background-color: var(--clr-accent);
+}
+
+#insideB {
+    margin: auto;
+
+}
+
+#animations-container {
+
+    background-color: #E9EBF8;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 5px;
+   
+
+}
+.wrapper {
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    border: solid;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @keyframes scrollright{
+    to{
+        right:-200px 
+    }
+  }
+
+.item{
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background-color: #93678f;
+    border-radius: 15px;
+    right: 100%;
+    animation: scrollright 3s linear .3s infinite right fill-mode;
+    animation-name: scrollright;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+#loader{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 10px;
+    border: solid;
+    position: relative;
+    border-radius: 50%;
+    border-width:  15px;
+    border-color: #93678f;
+    border-top-color: #000000;
+    animation: spin 2s infinite;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#writer{
+    width: 72%;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 3px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:  typing 3s steps(34), cursor .4s step-end infinite alternate;
+}
+@keyframes cursor {
+    50%{ border-color: transparent;}
+}
+@keyframes typing {
+    from{ width: 0;}
+}
+
+.cat-pics {
+    height: 200px;
+    padding: 0px;
+    margin: 0px;
+    border: 3px, dashed, #c234b6;
+    border-radius: 15%;
+    
+}
+#gallery:hover .cat-pics:not(:hover){
+    -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.3;
+  -webkit-filter: grayscale(50%) blur(0.3rem);
+  filter: grayscale(50%) blur(0.3rem);
+  border-radius: 50%;
+}
+img:hover {
+    background-color: #c234b6; // after this line is wilson code -> learn how to do this.
+    
+  transform: scale(1.3);
+  -webkit-box-shadow: 0 2rem 1rem rgb(0, 0, 0);
+  box-shadow: 0 2rem 1rem rgb(0, 0, 0);
+  outline: .5rem solid #fefffe;
+  z-index: 2;
+}
